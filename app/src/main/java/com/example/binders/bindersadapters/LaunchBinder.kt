@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.binders.abstraction.BaseItemViewBinder
 import com.example.binders.abstraction.BaseItemViewHolder
 import com.example.binders.bindersadapters.model.LaunchViewModel
@@ -34,7 +35,7 @@ class LaunchViewHolder(private val binding: HolderLaunchBinding, private val cal
             missionName.text = data.missionName
             missionDetails.text = data.missionDetails
             if (data.missionImageUrl == null) return@apply
-            missionPatch.load(data.missionImageUrl)
+            missionPatch.load(data.missionImageUrl, strategy = DiskCacheStrategy.AUTOMATIC)
         }
 
     }
