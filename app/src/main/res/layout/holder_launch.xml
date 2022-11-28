@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_normal"
+        app:cardBackgroundColor="@color/colorGrey"
+        app:cardElevation="0dp"
+        app:contentPadding="@dimen/space_normal">
+
+    <TextView
+            android:id="@+id/missionName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test "
+            android:textSize="@dimen/text_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/missionName"
+            app:layout_constraintBottom_toTopOf="@id/missionDetails"
+            android:textColor="@color/black" />
+
+    <ImageView
+            android:id="@+id/missionPatch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="@dimen/space_normal"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/missionName"
+            app:layout_constraintBottom_toBottomOf="@id/missionName"/>
+
+    <TextView
+            android:id="@+id/missionDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test details "
+            android:textSize="@dimen/text_small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/missionName"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/colorGreyDark" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
