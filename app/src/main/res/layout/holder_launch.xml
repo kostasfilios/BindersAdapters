@@ -3,10 +3,10 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/space_normal"
-        app:cardBackgroundColor="@color/colorGrey"
-        app:cardElevation="0dp"
-        app:contentPadding="@dimen/space_normal">
+        android:layout_marginTop="@dimen/space_minimum"
+        android:background="@color/colorGrey"
+        android:padding="@dimen/space_normal"
+        app:cardElevation="0dp">
 
     <TextView
             android:id="@+id/missionName"
@@ -22,11 +22,13 @@
 
     <ImageView
             android:id="@+id/missionPatch"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:layout_gravity="center|end"
             android:layout_marginEnd="@dimen/space_normal"
-            android:src="@drawable/ic_launcher_background"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/missionName"
             app:layout_constraintBottom_toBottomOf="@id/missionName"/>
@@ -38,7 +40,7 @@
             android:text="Test details "
             android:textSize="@dimen/text_small"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/missionName"
+            app:layout_constraintTop_toBottomOf="@id/missionPatch"
             app:layout_constraintBottom_toBottomOf="parent"
             android:textColor="@color/colorGreyDark" />
 
