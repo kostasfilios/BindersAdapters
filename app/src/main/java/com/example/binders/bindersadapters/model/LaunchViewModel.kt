@@ -4,6 +4,7 @@ data class LaunchViewModel(
         @JvmField val missionName: String?,
         @JvmField val missionDetails: String?,
         @JvmField val missionImageUrl: String?,
+        @JvmField val isLaunchSuccessFull: Boolean,
         @JvmField val flightNumber: Int ) {
 
         override fun equals(other: Any?): Boolean {

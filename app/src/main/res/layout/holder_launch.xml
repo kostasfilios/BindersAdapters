@@ -8,16 +8,27 @@
         android:padding="@dimen/space_normal"
         app:cardElevation="0dp">
 
+    <com.example.binders.ui.CircleView
+            android:id="@+id/status"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/missionName"
+            app:layout_constraintBottom_toBottomOf="@id/missionName"
+            app:cv_color="@color/black"
+            />
+
     <TextView
             android:id="@+id/missionName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Test "
             android:textSize="@dimen/text_large"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/status"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/missionName"
             app:layout_constraintBottom_toTopOf="@id/missionDetails"
+            android:layout_marginStart="@dimen/space_pre_small"
             android:textColor="@color/black" />
 
     <ImageView

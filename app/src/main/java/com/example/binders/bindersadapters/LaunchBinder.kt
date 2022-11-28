@@ -1,8 +1,10 @@
 package com.example.binders.bindersadapters
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.binders.abstraction.BaseItemViewBinder
@@ -34,6 +36,8 @@ class LaunchViewHolder(private val binding: HolderLaunchBinding, private val cal
         binding.apply {
             missionName.text = data.missionName
             missionDetails.text = data.missionDetails
+            val colorId = if (data.isLaunchSuccessFull) R.color.green else R.color.red
+            status.circleColor = ContextCompat.getColor(getContext(), colorId)
             if (data.missionImageUrl == null) return@apply
             missionPatch.load(data.missionImageUrl, strategy = DiskCacheStrategy.AUTOMATIC)
         }
